@@ -50,6 +50,35 @@ and Express, and a UI written in React that consumes the API.
 ```
 </details>
 
+## Get a value for a given key
+<details>
+  <summary>Get the value for the given key</summary>
+
+**URL** : `/v1/keys/:key`
+
+**Method** : `GET`
+
+### Success Response
+
+**Condition** : Key was found.
+
+**Code** : `200 OK`
+
+**Content** :
+  
+```json
+{
+    "key": "value"
+}
+```
+### OR
+  
+**Condition** : Key was not found.
+
+**Code** : `204 No Content`
+</details>
+
+
 ## Frontend Testing Instructions
 
 
