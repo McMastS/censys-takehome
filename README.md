@@ -55,6 +55,8 @@ and Express, and a UI written in React that consumes the API.
   <summary>Get the value for the given key</summary>
 
 **URL** : `/v1/keys/:key`
+  
+**URL Parameters** : key is a URL encoded string that may or may not match a key in the store
 
 **Method** : `GET`
 
@@ -78,6 +80,30 @@ and Express, and a UI written in React that consumes the API.
 **Code** : `204 No Content`
 </details>
 
+## Delete given key
+<details>
+  <summary>Delete the key and associated value for the given key</summary>
+
+**URL** : `/v1/keys/:key`
+
+**URL Parameters** : Key is a url encoded string that may or may not match a key in the store
+
+**Method** : `DELETE`
+
+**Data** : `{}`
+
+### Success Response
+
+**Condition** : If the Key exists.
+
+**Code** : `204 NO CONTENT`
+
+### Error Responses
+
+**Condition** : If there was no key available to delete.
+
+**Code** : `404 NOT FOUND`
+</details>
 
 ## Frontend Testing Instructions
 
