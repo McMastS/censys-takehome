@@ -1,24 +1,46 @@
-import React from 'react';
-import AddKeyValueForm from './components/AddKeyValueForm';
+import React, { useState } from 'react';
+import KeyValueForm from './components/KeyValueForm';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import Container from 'react-bootstrap/Container';
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
+import { SelectedAction } from './types/types';
 
 function App() {
+  const [selectedAction, setSelectedAction] 
+    = useState(SelectedAction.AddKeyValue);
+
   return (
     <Container>
       <Row>
-        <Col>
+        <Col className="mx-auto" md={4}>
           <h1>Spencer's Key Value Store</h1>
-          <ButtonGroup aria-label="Basic example">
-            <Button variant="success">Add key/value pair</Button>
-            <Button variant="secondary">Retrieve value</Button>
-            <Button variant="danger">Delete key</Button>
+          <ButtonGroup className="d-flex m-2">
+            <Button 
+              variant="outline-primary" 
+              onClick={() => {
+                setSelectedAction(SelectedAction.AddKeyValue);
+              }}>
+                Add key/value pair
+            </Button>
+            <Button 
+              variant="outline-secondary" 
+              onClick={() => {
+                setSelectedAction(SelectedAction.RetrieveValue);
+              }}>
+              Retrieve value
+            </Button>
+            <Button 
+              variant="outline-primary" 
+              onClick={() => {
+                setSelectedAction(SelectedAction.DeleteKey);
+              }}>
+              Delete key
+            </Button>
           </ButtonGroup>
-          <AddKeyValueForm />
+          <KeyValueForm selectedAction={selectedAction} />
         </Col>
       </Row>
     </Container>
