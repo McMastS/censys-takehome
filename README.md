@@ -78,7 +78,7 @@ and Express, and a UI written in React that consumes the API.
   
 **Condition** : Key was not found.
 
-**Code** : `204 No Content`
+**Code** : `404 Not Found`
 </details>
 
 ## Delete given key
