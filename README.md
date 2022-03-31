@@ -70,7 +70,8 @@ and Express, and a UI written in React that consumes the API.
   
 ```json
 {
-    "key": "value"
+    "key": "spencer-mcmaster",
+    "value": "{'age':23,'profession':'full stack developer'}"
 }
 ```
 ### OR
