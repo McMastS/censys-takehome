@@ -1,4 +1,3 @@
-/* eslint-disable import/no-unresolved */
 import express from 'express';
 import StoreService from '../services/store.service';
 

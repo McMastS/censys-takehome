@@ -2,11 +2,7 @@
 // I added this class as a wrapper over a map so that in a real world
 // scenario we could switch out the map for some other key value store.
 class KeyValueStore {
-  private store: Map<string, any>;
-
-  constructor() {
-    this.store = new Map();
-  }
+  private store: Map<string, any> = new Map();
 
   get(key: string) {
     return this.store.get(key);

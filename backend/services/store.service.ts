@@ -1,13 +1,7 @@
-/* eslint-disable import/no-unresolved */
-/* eslint-disable import/extensions */
 import KeyValueStore from '../store/store';
 
 class StoreService {
-  private store: KeyValueStore;
-
-  constructor() {
-    this.store = new KeyValueStore();
-  }
+  private store = new KeyValueStore();
 
   getKey(key: string) {
     return this.store.get(key);

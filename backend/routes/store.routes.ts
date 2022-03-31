@@ -2,10 +2,10 @@
 import express from 'express';
 import { storeKeyValue, retrieveKey, deleteKey } from '../controllers/store.controller';
 
-const router = express.Router();
+const storeRouter = express.Router();
 
-router.post('/keys', storeKeyValue);
-router.get('/keys/:key', retrieveKey);
-router.delete('/keys/:key', deleteKey);
+storeRouter.post('/keys', storeKeyValue);
+storeRouter.get('/keys/:key', retrieveKey);
+storeRouter.delete('/keys/:key', deleteKey);
 
-export default router;
+export default storeRouter;
