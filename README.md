@@ -106,7 +106,20 @@ and Express, and a UI written in React that consumes the API.
 **Code** : `404 NOT FOUND`
 </details>
 
-## Frontend Testing Instructions
+## Testing Instructions using UI
+1. In a terminal navigate to frontend directory
+2. run `npm install && npm start`
+3. In another terminal navigate to backend directory
+4. run `npm install && npm start`
+5. Navigate to http:/localhost:3000 in a browser
+6. Add a key value pair via the form
+7. Retrieve the value by clicking "Retrieve value", make sure it appears below the form
+8. Delete the value by clicking "Delete key"
+9. Navigate back to "Retrieve value" and ensure that the key was deleted
+10. Run in other orders and with different values to see if anything breaks
 
-
-## Backend Testing Instructions
+## Testing Instructions for API
+1. In a terminal navigate to backend directory
+2. Run `npm install` if needed and then `npm start`
+3. Go to this [postman](https://go.postman.co/workspace/My-Workspace~7dc60027-120d-43b3-84f6-0d438655e1dc/collection/4298122-753e334b-5b7b-4c6e-9412-b23581f42490?action=share&creator=4298122) collection
+4. Run the queries in the same order as steps 6-10 in the UI instructions
