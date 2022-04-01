@@ -8,6 +8,10 @@ interface KeyValueFormProps {
 }
 
 const KeyValueForm = ({ selectedAction }: KeyValueFormProps) => {
+  const onSubmit = () => {
+
+  };
+  
   return (
     <Form>
       <Form.Group className="mb-3" controlId="formKey">
@@ -20,8 +24,11 @@ const KeyValueForm = ({ selectedAction }: KeyValueFormProps) => {
           <Form.Control type="text" placeholder="Enter value" />
         </Form.Group>
       }
-      <Button variant="primary" type="submit">
-        Submit
+      <Button 
+        variant={selectedAction === SelectedAction.DeleteKey ? "danger" : "primary"} 
+        type="submit" 
+        onSubmit={onSubmit}>
+          Submit
       </Button>
     </Form>
   );

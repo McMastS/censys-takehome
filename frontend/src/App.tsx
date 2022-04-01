@@ -19,21 +19,24 @@ function App() {
           <h1>Spencer's Key Value Store</h1>
           <ButtonGroup className="d-flex m-2">
             <Button 
-              variant="outline-primary" 
+              variant={selectedAction === SelectedAction.AddKeyValue 
+                ? "primary" : "outline-primary"} 
               onClick={() => {
                 setSelectedAction(SelectedAction.AddKeyValue);
               }}>
                 Add key/value pair
             </Button>
             <Button 
-              variant="outline-secondary" 
+              variant={selectedAction === SelectedAction.RetrieveValue 
+                ? "secondary" : "outline-secondary"}  
               onClick={() => {
                 setSelectedAction(SelectedAction.RetrieveValue);
               }}>
               Retrieve value
             </Button>
             <Button 
-              variant="outline-primary" 
+              variant={selectedAction === SelectedAction.DeleteKey 
+                ? "primary" : "outline-primary"} 
               onClick={() => {
                 setSelectedAction(SelectedAction.DeleteKey);
               }}>
