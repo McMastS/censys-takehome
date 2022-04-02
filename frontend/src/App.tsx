@@ -18,7 +18,10 @@ function App() {
       <Row>
         <Col className="mx-auto" md={4}>
           <h1>Spencer's Key Value Store</h1>
-          <ActionSelector selectedAction={selectedAction} setSelectedAction={setSelectedAction} />
+          <ActionSelector 
+            selectedAction={selectedAction} 
+            setSelectedAction={setSelectedAction} 
+          />
           <KeyValueForm selectedAction={selectedAction} />
         </Col>
       </Row>
