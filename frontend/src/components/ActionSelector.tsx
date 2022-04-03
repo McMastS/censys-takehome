@@ -23,7 +23,7 @@ const ActionSelector = ({ selectedAction, setError, setSelectedAction }: ActionS
       </Button>
       <Button 
         variant={selectedAction === SelectedAction.RetrieveValue 
-          ? "secondary" : "outline-secondary"}  
+          ? "primary" : "outline-primary"}  
         onClick={() => {
           setError("");
           setSelectedAction(SelectedAction.RetrieveValue);
