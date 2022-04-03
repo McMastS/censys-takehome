@@ -125,8 +125,9 @@ and Express, and a UI written in React that consumes the API.
 4. Run the queries in the same order as steps 6-10 in the UI instructions
 
 ## Things to do before this would be production ready
-1. Better display of retrieved value, ran out of time to display it well
-2. Refactor the fetch API usage in the frontend, I hadn't used fetch in awhile and was pushed for time so it's a bit messy
-3. Add logging in the backend
-4. Add validation in front (can do inline or use a form library) and backend (Express middleware)
-5. Add automated tests (i.e. Cypress for e2e in the front end, mocha + chai in the backend, automate Postman tests)
+- [ ] Better display of retrieved value, ran out of time to display it well
+- [ ] Refactor the fetch API usage in the frontend, I hadn't used fetch in awhile and was pushed for time so it's a bit messy
+- [ ] Add logging in the backend
+- [ ] Validation frontend
+- [ ] Validation backend (Express middleware)
+- [ ] Add automated tests (i.e. Cypress for e2e in the front end, mocha + chai in the backend, automate Postman tests)
