@@ -5,16 +5,18 @@ import { SelectedAction } from "../types/types";
 
 interface ActionSelectorProps {
   selectedAction: SelectedAction,
+  setError: React.Dispatch<React.SetStateAction<string>>,
   setSelectedAction: React.Dispatch<React.SetStateAction<SelectedAction>>
 }
 
-const ActionSelector = ({ selectedAction, setSelectedAction }: ActionSelectorProps) => {
+const ActionSelector = ({ selectedAction, setError, setSelectedAction }: ActionSelectorProps) => {  
   return (
     <ButtonGroup className="d-flex m-2">
       <Button 
         variant={selectedAction === SelectedAction.AddKeyValue 
           ? "primary" : "outline-primary"} 
         onClick={() => {
+          setError("");
           setSelectedAction(SelectedAction.AddKeyValue);
         }}>
           Add key/value pair
@@ -23,6 +25,7 @@ const ActionSelector = ({ selectedAction, setSelectedAction }: ActionSelectorPro
         variant={selectedAction === SelectedAction.RetrieveValue 
           ? "secondary" : "outline-secondary"}  
         onClick={() => {
+          setError("");
           setSelectedAction(SelectedAction.RetrieveValue);
         }}>
         Retrieve value
@@ -31,6 +34,7 @@ const ActionSelector = ({ selectedAction, setSelectedAction }: ActionSelectorPro
         variant={selectedAction === SelectedAction.DeleteKey 
           ? "primary" : "outline-primary"} 
         onClick={() => {
+          setError("");
           setSelectedAction(SelectedAction.DeleteKey);
         }}>
         Delete key

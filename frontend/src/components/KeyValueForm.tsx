@@ -9,16 +9,31 @@ import { SelectedAction } from '../types/types';
 
 interface KeyValueFormProps {
   selectedAction: SelectedAction;
+  setError: React.Dispatch<React.SetStateAction<string>>
 }
 
-const KeyValueForm = ({ selectedAction }: KeyValueFormProps) => {
+const KeyValueForm = ({ setError, selectedAction }: KeyValueFormProps) => {
   const [key, setKey] = useState("");
   const [value, setValue] = useState("");
 
   const [retrievedValue, setRetrievedValue] = useState("");
+
+  const validate = () => {
+    if (!key || (selectedAction === SelectedAction.AddKeyValue
+      && !value)) {
+        setError("Please complete all form values.");
+        return false;
+    }
+
+    setError("");
+    return true;
+  };
   
   const onSubmit = async (e: React.FormEvent<HTMLButtonElement>) => {
     e.preventDefault();
+    if (!validate()) {
+      return;
+    }
 
     if (selectedAction === SelectedAction.AddKeyValue) {
       storeKeyValue(key, value);

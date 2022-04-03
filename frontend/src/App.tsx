@@ -12,6 +12,7 @@ import ActionSelector from './components/ActionSelector';
 function App() {
   const [selectedAction, setSelectedAction] 
     = useState(SelectedAction.AddKeyValue);
+  const [error, setError] = useState("");
 
   return (
     <Container>
@@ -20,9 +21,14 @@ function App() {
           <h1>Spencer's Key Value Store</h1>
           <ActionSelector 
             selectedAction={selectedAction} 
+            setError={setError}
             setSelectedAction={setSelectedAction} 
           />
-          <KeyValueForm selectedAction={selectedAction} />
+          <KeyValueForm 
+            selectedAction={selectedAction} 
+            setError={setError} 
+          />
+          {error && <p className="text-danger">{error}</p>}
         </Col>
       </Row>
     </Container>
