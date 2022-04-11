@@ -125,6 +125,7 @@ and Express, and a UI written in React that consumes the API.
 4. Run the queries in the same order as steps 6-10 in the UI instructions
 
 ## Things to do before this would be production ready
+- [ ] Unit tests
 - [ ] Better display of retrieved value, ran out of time to display it well
 - [ ] Refactor the fetch API usage in the frontend, I hadn't used fetch in awhile and was pushed for time so it's a bit messy
 - [ ] Add logging in the backend
